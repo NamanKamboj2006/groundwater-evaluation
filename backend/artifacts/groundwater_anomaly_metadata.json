@@ -1,0 +1,193 @@
+{
+  "dataset_summary": {
+    "total_station_months": 19270,
+    "training_samples": 10853,
+    "training_period": "2023-06 to 2024-12",
+    "evaluation_samples": 8417,
+    "evaluation_period": "2025-01 to 2025-12"
+  },
+  "model_performance": {
+    "model_type": "IsolationForest",
+    "contamination_param": 0.03,
+    "train_anomaly_count": 326,
+    "train_anomaly_percentage": 3.0,
+    "test_anomaly_count": 321,
+    "test_anomaly_percentage": 3.81,
+    "total_anomaly_count": 647,
+    "total_anomaly_percentage": 3.36
+  },
+  "statistical_baseline_comparison": {
+    "baseline_type": "IQR + Historical Z-Score + Quality Thresholds",
+    "parameters": {
+      "iqr_multiplier": 1.5,
+      "zscore_threshold": 3.0,
+      "valid_ratio_min": 0.8,
+      "lower_change_bound": -1.2757665461624073,
+      "upper_change_bound": 1.3292438357434242
+    },
+    "stat_anomaly_count": 3640,
+    "stat_anomaly_percentage": 18.89,
+    "overlap_count": 485,
+    "ml_overlap_with_baseline_pct": 74.96,
+    "overlap_definition": "ML anomalies also flagged by statistical baseline / Total ML anomalies"
+  },
+  "district_anomaly_distribution": {
+    "BHIWANI": 159,
+    "Charkhi Dadri": 87,
+    "FARIDABAD": 2,
+    "FATEHABAD": 2,
+    "GURUGRAM": 57,
+    "KAITHAL": 3,
+    "KARNAL": 3,
+    "KURUKSHETRA": 7,
+    "MAHENDRAGARH": 284,
+    "PANIPAT": 16,
+    "Palwal": 7,
+    "REWARI": 12,
+    "SIRSA": 1,
+    "YAMUNANAGAR": 7
+  },
+  "top_detected_anomalies": [
+    {
+      "station_id": 539,
+      "station_name": "Govt.primary school Chandpura",
+      "district": "MAHENDRAGARH",
+      "month": "2025-01",
+      "anomaly_score": 1.0,
+      "mean_gw_level": -6.7,
+      "month_to_month_change": 79.45,
+      "history_zscore": 120.0,
+      "valid_ratio": 1.0,
+      "stat_anomaly": true
+    },
+    {
+      "station_id": 177,
+      "station_name": "Government Primary School, Kushalpura",
+      "district": "BHIWANI",
+      "month": "2024-10",
+      "anomaly_score": 1.0,
+      "mean_gw_level": -6.49,
+      "month_to_month_change": 79.88,
+      "history_zscore": 110.41,
+      "valid_ratio": 1.0,
+      "stat_anomaly": true
+    },
+    {
+      "station_id": 195,
+      "station_name": "Government Senior Secondary  School, Budhera",
+      "district": "BHIWANI",
+      "month": "2024-06",
+      "anomaly_score": 0.9933,
+      "mean_gw_level": -8.56,
+      "month_to_month_change": 72.45,
+      "history_zscore": 247.4,
+      "valid_ratio": 1.0,
+      "stat_anomaly": true
+    },
+    {
+      "station_id": 619,
+      "station_name": "Govt. Primary School, Kari Tokha",
+      "district": "Charkhi Dadri",
+      "month": "2025-04",
+      "anomaly_score": 0.9755,
+      "mean_gw_level": -18.81,
+      "month_to_month_change": 53.25,
+      "history_zscore": 69.12,
+      "valid_ratio": 1.0,
+      "stat_anomaly": true
+    },
+    {
+      "station_id": 721,
+      "station_name": "Govt. Senior Seacondary  School, Dhanasri.Playground",
+      "district": "Charkhi Dadri",
+      "month": "2025-02",
+      "anomaly_score": 0.9719,
+      "mean_gw_level": -41.11,
+      "month_to_month_change": 45.43,
+      "history_zscore": 20.96,
+      "valid_ratio": 1.0,
+      "stat_anomaly": true
+    },
+    {
+      "station_id": 391,
+      "station_name": "Govt. Middle School, Kari Rupa Das",
+      "district": "Charkhi Dadri",
+      "month": "2025-10",
+      "anomaly_score": 0.9711,
+      "mean_gw_level": -22.67,
+      "month_to_month_change": 48.93,
+      "history_zscore": 41.23,
+      "valid_ratio": 1.0,
+      "stat_anomaly": true
+    },
+    {
+      "station_id": 781,
+      "station_name": "Govt. Sr. Sec. School, Khojkipur",
+      "district": "PANIPAT",
+      "month": "2025-04",
+      "anomaly_score": 0.9699,
+      "mean_gw_level": 4.21,
+      "month_to_month_change": 13.62,
+      "history_zscore": 8.48,
+      "valid_ratio": 0.205,
+      "stat_anomaly": true
+    },
+    {
+      "station_id": 914,
+      "station_name": "Panchayat Land Infornt of school baproli",
+      "district": "MAHENDRAGARH",
+      "month": "2025-05",
+      "anomaly_score": 0.9645,
+      "mean_gw_level": -11.56,
+      "month_to_month_change": 88.09,
+      "history_zscore": 0.53,
+      "valid_ratio": 0.76,
+      "stat_anomaly": true
+    },
+    {
+      "station_id": 112,
+      "station_name": "Government Middle School, Bairan",
+      "district": "BHIWANI",
+      "month": "2024-07",
+      "anomaly_score": 0.9631,
+      "mean_gw_level": -37.93,
+      "month_to_month_change": 37.86,
+      "history_zscore": 57.09,
+      "valid_ratio": 1.0,
+      "stat_anomaly": true
+    },
+    {
+      "station_id": 652,
+      "station_name": "Govt.primary school mohlra",
+      "district": "MAHENDRAGARH",
+      "month": "2024-09",
+      "anomaly_score": 0.9624,
+      "mean_gw_level": -47.31,
+      "month_to_month_change": 39.57,
+      "history_zscore": 19.7,
+      "valid_ratio": 1.0,
+      "stat_anomaly": true
+    }
+  ],
+  "methodological_notes": [
+    "Anomaly detection uses unsupervised statistical machine learning (Isolation Forest).",
+    "Evaluation uses a proxy statistical baseline (IQR & Z-score) rather than manufactured true/false labels.",
+    "Temporal split is strictly chronological (2023-06..2024-12 vs 2025-01..2025-12) to avoid time-series data leakage.",
+    "High anomaly scores indicate unusual observation shifts or deviations from local historical station behavior, which represent candidate events for scientific or hydrological review."
+  ],
+  "metadata": {
+    "trained_at": "2026-10-02T13:14:20.761206+05:30",
+    "model_path": "artifacts/groundwater_anomaly_isolation_forest.joblib",
+    "baseline_path": "artifacts/groundwater_anomaly_statistical_baseline.joblib",
+    "features_used": [
+      "mean_gw_level",
+      "std_gw_level",
+      "monthly_range",
+      "valid_ratio",
+      "month_to_month_change",
+      "deviation_from_history",
+      "history_zscore"
+    ],
+    "random_state": 42
+  }
+}

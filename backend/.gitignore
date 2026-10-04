@@ -1,0 +1,47 @@
+# Python bytecode & cache
+__pycache__/
+*.py[cod]
+*.pyc
+*$py.class
+*.so
+.Python
+
+# Virtual Environment
+.venv/
+venv/
+ENV/
+env/
+env.bak/
+venv.bak/
+
+# Environment Variables & Secrets
+.env
+.env.local
+.env.*.local
+*.env
+
+# IDE & Editor files
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# Testing & Coverage
+.coverage
+htmlcov/
+.pytest_cache/
+
+# OS specific
+.DS_Store
+Thumbs.db
+
+# Large Data Files & Datasets (Prevent committing 329 MB CSVs to Git)
+*.csv
+*.tsv
+*.parquet
+app/data/*.csv
+backend/app/data/*.csv
+data/
+app/data/
+

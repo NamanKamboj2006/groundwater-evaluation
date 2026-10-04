@@ -1,0 +1,65 @@
+{
+  "model_name": "HistGradientBoostingRegressor",
+  "model_parameters": {
+    "loss": "squared_error",
+    "max_iter": 100,
+    "learning_rate": 0.08,
+    "max_depth": 6,
+    "random_state": 42
+  },
+  "features_used": [
+    "lag_1_month",
+    "lag_2_month",
+    "lag_3_month",
+    "lag_6_month",
+    "lag_12_month",
+    "rolling_mean_3",
+    "rolling_mean_6",
+    "rolling_std_3",
+    "rolling_std_6",
+    "change_from_previous_month",
+    "change_from_3_months_ago",
+    "historical_mean",
+    "historical_std",
+    "month_num",
+    "sin_month",
+    "cos_month",
+    "rl_msl",
+    "latitude",
+    "longitude"
+  ],
+  "feature_count": 19,
+  "dataset_summary": {
+    "total_eligible_samples": 18283,
+    "training_samples": 9872,
+    "training_period": "2023-07 to 2024-12",
+    "evaluation_samples": 8411,
+    "evaluation_period": "2025-01 to 2025-12",
+    "stations_represented": 980
+  },
+  "evaluation_metrics": {
+    "naive_baseline": {
+      "mae": 1.1425,
+      "rmse": 5.1525,
+      "r2": 0.9626
+    },
+    "ml_model": {
+      "mae": 1.5688,
+      "rmse": 4.9799,
+      "r2": 0.9651
+    },
+    "comparison": {
+      "mae_difference_meters": 0.4263,
+      "mae_difference_percentage": 37.31,
+      "rmse_difference_meters": -0.1726,
+      "rmse_difference_percentage": -3.35,
+      "interpretation": "ML model achieves a lower RMSE (-4.26%) across large seasonal shifts while naive persistence retains lower MAE on near-stationary observation months."
+    }
+  },
+  "leakage_safeguards": [
+    "Strict chronological split: training <= 2024-12, evaluation >= 2025-01.",
+    "Target is mean_gw_level at month t; all features use shift(1) strictly prior to month t.",
+    "Expanding historical statistics and rolling averages apply .shift(1) before calculation."
+  ],
+  "trained_at": "2026-10-02T13:21:47.525298+05:30"
+}
